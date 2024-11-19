@@ -1,0 +1,11 @@
+def create_enemy(screen, enemies, level, player, bullets_enemy):
+    if level == "1":
+        # new_enemy = [Enemy_1(screen, 300, -50), Enemy_1(screen, 300, -50), Enemy_1(screen, 300, -50), Enemy_1(screen, 300, -50)]
+        new_enemy = []
+        for x in range(10):
+            new_enemy.append(
+                Enemy(screen, random.randint(50, 780), -(random.randint(50, 200)), player, "satell", bullets_enemy))
+            new_enemy.append(
+                Enemy(screen, random.randint(50, 780), -(random.randint(50, 200)), player, "fighter", bullets_enemy))
+
+        enemies.add(new_enemy)
